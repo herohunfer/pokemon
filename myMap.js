@@ -25,7 +25,7 @@ function get_pokemon_layer_from_map_items(map_items) {
         pushpins.add(pushpin);
     }
     var layer = new Microsoft.Maps.Layer();
-    layer.push_back(pushpins);
+    layer.push(pushpins);
     return layer;
 }
 
