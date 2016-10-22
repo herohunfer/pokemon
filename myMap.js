@@ -3,15 +3,15 @@ function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
         credentials: 'AvKTWSjO1pshQ6xHC9YaVQlDX2wBRuTtNyjU9_GL91NiH5TRgWPlW3DJZU8c4VRd'
     });
-    add_pokemon_layer(map);
+    add_pokemon_layer();
 }
 
 // 1. Define pokemon data format. create mock pokemon data
-var map_items = [
+map_items = [
     {
         "pokeon_id": 12,
         "expire": 1234567,
-        "longitude": -118.1256885
+        "longitude": -118.1256885,
         "latitude": 34.0454723,
     }
 ]
@@ -24,7 +24,7 @@ function get_pokemon_layer_from_map_items(map_items) {
     return layer;
 }
 
-function add_pokemon_layer(map, map_items) {
+function add_pokemon_layer(map_items) {
     var pokemon_layer = get_pokeon_layer_from_map_items(map_items);
     map.layers.insert(pokemon_layer);
 }
