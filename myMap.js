@@ -16,7 +16,7 @@ function loadMapScenario() {
     map_manager.map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
         credentials: 'AvKTWSjO1pshQ6xHC9YaVQlDX2wBRuTtNyjU9_GL91NiH5TRgWPlW3DJZU8c4VRd'
     });
-    add_pokemon_layer(map_items);
+    add_pokemon_layer();
 }
 
 // 1. Define pokemon data format. create mock pokemon data
